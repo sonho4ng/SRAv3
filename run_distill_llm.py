@@ -48,7 +48,7 @@ def main():
 
     set_seed(extras.seed)
 
-    login(args.hf_token)
+    # login(args.hf_token)
 
     if extras.teacher_model_type == 'qwen':
         TeacherLLM = TeacherQwen
@@ -65,7 +65,8 @@ def main():
                         'output_hidden_states': args.finetune_hidden_states,
                         'output_attentions': args.output_attentions,
                         'attn_implementation': 'sdpa',
-                        'token' : args.hf_token}
+                        # 'token' : args.hf_token
+                        }
     
     teacher_model = TeacherLLM(model_name = args.teacher_model, 
                                         load_model_kwargs = load_model_kwargs,
