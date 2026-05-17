@@ -25,8 +25,8 @@ OPTS+=" --max_len 320"
 OPTS+=" --pad_to_multiple_of 1"
 
 # devices
-OPTS+=" --teach_device auto"
-OPTS+=" --student_device auto"
+OPTS+=" --teach_device cuda:7"
+OPTS+=" --student_device cuda:7"
 
 # loss
 OPTS+=" --hard_label_loss_weight 0.7"
