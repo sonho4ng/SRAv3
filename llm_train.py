@@ -187,6 +187,7 @@ class Trainer:
                 
 
                 kd_loss += 1 * span_loss
+                kd_loss += 1 * der_loss
 
                 s_hidden = F.normalize(student_outputs.embeddings, dim=-1, eps=1e-5)
                 t_hidden = F.normalize(teacher_outputs.hidden_states[n_layer - 1], dim=-1, eps=1e-5)
