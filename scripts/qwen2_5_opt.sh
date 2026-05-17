@@ -64,4 +64,13 @@ OPTS+=" --use_lora True"
 OPTS+=" --grad_accum_steps 8"
 
 # ==== Gọi Python ====
-python run_distill_llm.py ${OPTS} >> ${OUTPUT_DIR}/train.log 2>&1
+LOG_FILE="${OUTPUT_DIR}/train.log"
+
+exec > >(tee -a "$LOG_FILE") 2>&1
+
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting training"
+echo "Args: ${OPTS}"
+
+python run_distill_llm.py ${OPTS}
+
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] Training finished"
