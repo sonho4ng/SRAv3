@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "E:\Embeding model distillation\Embedding-distillation\run_distill_llm.py", line 8, in <module>
+    from evaluator import Evaluator
+  File "E:\Embeding model distillation\Embedding-distillation\evaluator.py", line 10, in <module>
+    from rouge_score import rouge_scorer
+ModuleNotFoundError: No module named 'rouge_score'
+usage: run_distill_llm.py [--seed SEED] [--teacher_sft TEACHER_SFT]
+                          [--student_sft STUDENT_SFT]
+                          [--student_model_type STUDENT_MODEL_TYPE]
+                          [--teacher_model_type TEACHER_MODEL_TYPE]
+                          [--use_lora USE_LORA]
+                          [--grad_accum_steps GRAD_ACCUM_STEPS]
+run_distill_llm.py: error: argument --seed: expected one argument

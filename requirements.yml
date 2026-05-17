@@ -1,0 +1,9 @@
+dependencies:
+  - transformers
+  - peft
+  - rouge_score
+  - scikit-learn
+  - scipy
+  - tqdm
+  - huggingface_hub
+  - datasets
